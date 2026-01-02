@@ -1,0 +1,123 @@
+/* Import Google Font - Poppins */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #e3f2fd;
+}
+section {
+  width: 380px;
+  height: 275px;
+}
+.container {
+  position: relative;
+  width: 100%;
+  transform-style: preserve-3d;
+  transition: 1s;
+}
+.container:hover {
+  transform: rotateY(180deg);
+}
+.card-frontface {
+  position: absolute;
+  background-image: url("images/bg.png");
+  background-size: cover;
+  padding: 25px;
+  border-radius: 28px;
+  max-width: 380px;
+  width: 100%;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+header,
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.logo img {
+  width: 48px;
+}
+header .chip {
+  width: 60px;
+}
+h5 {
+  color: #fff;
+  font-size: 16px;
+  font-weight: 400;
+}
+h6 {
+  color: #fff;
+  font-size: 12px;
+  font-weight: 400;
+}
+.card-frontface .card-details {
+  margin-top: 40px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+.card-backface {
+  position: absolute;
+  background-image: url("images/bg.png");
+  background-size: cover;
+  padding: 25px;
+  border-radius: 28px;
+  max-width: 380px;
+  width: 100%;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  position: relative;
+  transform: rotateY(180deg);
+  backface-visibility: hidden;
+}
+.card-backface .magnetic-strip {
+  position: absolute;
+  top: 40px;
+  left: 0px;
+  height: 30px;
+  width: 100%;
+  background: #fff;
+}
+
+.card-backface h6 {
+  font-size: 8px;
+  font-weight: 500;
+}
+.card-backface .signature {
+  background: repeating-linear-gradient(
+    #fff,
+    #fff 3px,
+    #efefef 0px,
+    #efefef 9px
+  );
+  width: 90%;
+  margin-top: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 3px 0;
+}
+
+.signature i {
+  color: #000000;
+  font-size: 12px;
+  padding: 2px;
+  background-color: #fff;
+  margin-right: -20px;
+  border-radius: 4px;
+  z-index: 0;
+}
+
+.card-backface h5 {
+  font-size: 10px;
+  color: #efefef;
+  font-weight: 500;
+}

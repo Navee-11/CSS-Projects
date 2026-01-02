@@ -128,7 +128,7 @@ h5.name {
   );
 }
 
-.signature i {
+.card.back-face .signature i {
   color: #000;
   font-size: 12px;
   padding: 6px 6px;

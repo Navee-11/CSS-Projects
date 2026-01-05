@@ -1,0 +1,21 @@
+.grid-even-columns {
+  display: grid; /* Grid or flex changes the inner behavior, on outside it is always a block.When display: grid is used it doesn't matter what the grid items are block or inline. They are grid items */
+  /* grid-template-columns: 50 50%; */
+  /* grid-template-columns: 30% 1fr 1fr; fr means just divide the remaining space equally or whatever the fraction you mention */
+  /* grid-template-columns: repeat(
+    3,
+    1fr
+  ); repeat function is used to avoid repetition */
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+@media (min-width: 40em) {
+  .grid-even-columns {
+    grid-template-columns: repeat(2, 1fr); /* desktop */
+  }
+}
+@media (min-width: 60em) {
+  .grid-even-columns {
+    grid-template-columns: repeat(4, 1fr); /* desktop */
+  }
+}

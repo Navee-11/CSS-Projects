@@ -74,7 +74,6 @@ h6 {
   max-width: 380px;
   width: 100%;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
-  position: relative;
   transform: rotateY(180deg);
   backface-visibility: hidden;
 }

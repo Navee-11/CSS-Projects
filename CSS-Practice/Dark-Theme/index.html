@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    />
+    <title>Dark Theme</title>
+  </head>
+  <body>
+    <div class="hero">
+      <nav>
+        <img src="images/logo.png" alt="" class="logo" />
+        <ul>
+          <li><a href="">Home</a></li>
+          <li><a href="">About</a></li>
+          <li><a href="">Services</a></li>
+          <li><a href="">Portfolio</a></li>
+          <li><a href="">Contact</a></li>
+        </ul>
+        <img src="images/moon.png" alt="" class="icon" />
+      </nav>
+      <div class="info">
+        <h1>I'm <span>Naveen Kumar</span></h1>
+        <p>
+          This is my portfolio website, which showcases my works related to Web
+          Development.
+        </p>
+        <a href="#">View My Work</a>
+      </div>
+      <div class="img-box">
+        <img src="images/pattern.png" alt="" class="back-img" />
+        <img src="images/girl.png" alt="" class="main-img" />
+      </div>
+
+      <div class="social-links">
+        <a href=""><i class="fa-brands fa-linkedin-in"></i></a>
+        <a href=""><i class="fa-brands fa-behance"></i></a>
+        <a href=""><i class="fa-brands fa-dribbble"></i></a>
+      </div>
+    </div>
+    <script>
+      let icon = document.querySelector(".icon");
+      icon.onclick = function () {
+        console.log(document.body.classList);
+        document.body.classList.toggle("dark-theme"); //this line is used to toggle between dark and light theme, if the body has the class dark-theme it will remove it, otherwise it will add it.
+        if (document.body.classList.contains("dark-theme")) {
+          icon.src = "images/sun.png";
+        } else {
+          icon.src = "images/moon.png";
+        }
+      };
+      //   CSS variables are resolved from the closest ancestor, not always from :root. This means that if you set a CSS variable on a parent element, all its children will inherit that variable unless they have their own value defined.
+    </script>
+  </body>
+</html>
